@@ -1,5 +1,6 @@
 {
 	"name" : "ghostslave",
 	"main" : "./app.js",
-	"customHost":"blog.iisii.net"
+	"customHost":"blog.iisii.net"，
+	“description”:"changjie"
 }
