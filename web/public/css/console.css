@@ -1,0 +1,52 @@
+﻿.mp_warp{ background:#F9F8F8;width:926px; margin:25px auto 0px auto; padding:35px;}
+
+.mp_foot{ background:#F0EFEF;width:926px; margin:0px auto 25px auto; padding:35px;}
+    .mp_foot .copyright{ text-align:center;}
+
+
+.mp_head{ position:relative;width:auto; height:79px;}
+    .mp_logo{position:absolute;}
+    .mp_logo2{position:absolute;top:25px;left:350px;width:316px;height:55px; background:url(../images/maipi-logo2.png) no-repeat 0 1px;}
+    .mp_logo3{position:absolute;bottom:-15px;right:0px;width:117px;height:119px; background:url(../images/maipi-logo3.png);}
+    .mp_head .user{position:absolute;bottom:20px;right:10px;}
+    .mp_head .user a{position:relative;display:inline;}
+
+
+#main_container { margin-top:20px;}
+
+
+
+.my-ui-grid{padding:2px;padding:2px}
+	.my-ui-grid table{width:100%; border-collapse:collapse;}
+		.my-ui-grid thead th{height:28px;font-weight:bold;padding:0px 3px;}
+		
+		.my-ui-grid td{height:22px; border: 1px solid #DDDDDD;color: #444444;padding:0px 3px;}
+			.my-ui-grid td a{padding:3px 4px;cursor:pointer;}
+			.my-ui-grid td a,.my-ui-grid td a:link,.my-ui-grid td a:visited{color: #0073ea; text-decoration: none;}
+			.my-ui-grid td a:hover{background: #0073ea;color: #ffffff; text-decoration: none;}
+			
+.my-ui-fieldset{padding:10px;}
+	.my-ui-fieldset legend{}
+	.my-ui-fieldset legend img{vertical-align:middle;width:25px; height:25px; margin:0px 8px;}
+
+.my-ui-form{position:relative;}
+.my-ui-form li{position:relative;margin-left:110px;text-align:left;padding:2px 0px;zoom:1;}
+.my-ui-form li label {position:relative;margin-left:-110px;width:110px;display:block;height:20px;line-height:20px;overflow:hidden;vertical-align:middle;text-align:right;float:left;padding:1px;}
+.my-ui-form li input {margin:0px;padding:0px;vertical-align:middle;border:1px solid #dddddd;height:20px;}
+.my-ui-form li select{margin:0px;padding:0px;vertical-align:middle;border:1px solid #dddddd;height:20px;}
+.my-ui-form li textarea{width:280px;}
+.my-ui-form li big{color: Red;vertical-align: middle;}
+	
+.my-ui-form li .msgbox.st1{display:block;white-space:nowrap;padding:1px 2px 1px 20px;height:18px;line-height:18px; background:url(vicons.gif) no-repeat 100px 100px ;vertical-align:middle;}
+.my-ui-form li .msgbox.st1.def{background-position:1px 1px;}                                                                
+.my-ui-form li .msgbox.st1.tips{background-position:1px -18px;}                                                               
+.my-ui-form li .msgbox.st1.error{background-position:1px -38px;}                                                              
+.my-ui-form li .msgbox.st1.pass{background-position:1px -58px;}
+
+
+
+
+
+#user_info{}
+#user_info table{}
+#user_info table td{ text-align:left;}

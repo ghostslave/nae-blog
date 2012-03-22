@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>${title}</title>
+	<link rel="stylesheet" href="/public/css/jquery-ui-flick/jquery-ui-1.8.10.css"  />
+	<script type="text/javascript" src="/public/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="/public/js/jquery-ui-1.8.9.min.js"></script>
+	<script type="text/javascript" src="/public/ckeditor-3.6.2/ckeditor.js"></script>
+	<style type="text/css"> </style>
+</head>
+<body class="ui-helper-reset">
+	<form id="frm-article" method="post">
+	<ul class="ui-helper-reset">
+		<li><label>标题：</label><input name="txt-title" type="text" /> </li>	
+		<li><label>标签：</label><input name="txt-tag" type="text" /> </li>	
+		<li><textarea id="txt-content" name="txt-content"></textarea> </li>
+		<li><button type="submit"  id="btn-submit">提交</button></li>
+	</ul>
+	</form>
+	
+	<script type="text/javascript">
+		var editor = CKEDITOR.replace('txt-content',{
+				toolbar : [ [ 'Source', '-', 'Bold', 'Italic', 'Underline', 'Strike','-','Link', '-', 'MyButton' ] ]
+			});
+		
+		var button=$("#btn-submit").button();
+		
+		var frmArticle=$("#frm-article");
+		
+		frmArticle.submit(function(){
+			alert(frmArticle.serialize());	
+			
+			return false;
+		})
+		
+		
+		/*
+		button.click(function(){
+			console.dir(editor);
+			
+			alert($("#frm-article").serialize());	
+		});
+		*/
+	</script>
+	
+	
+	<!--
+	<div id="toolbar" class="ui-widget-header ui-corner-all">
+		<button id="beginning"> go to beginning </button>
+		<button id="rewind"> rewind </button>
+		<button id="play"> play </button>
+		<button id="stop"> stop </button>
+		<button id="forward"> fast forward </button>
+		<button id="end"> go to end </button>
+
+		<input type="checkbox" id="shuffle" />
+		<label for="shuffle"> Shuffle </label>
+
+		<span id="repeat">
+			<input type="radio" id="repeat0" name="repeat" checked="checked" />
+			<label for="repeat0"> No Repeat </label>
+			<input type="radio" id="repeat1" name="repeat" />
+			<label for="repeat1"> Once </label>
+			<input type="radio" id="repeatall" name="repeat" />
+			<label for="repeatall"> All </label>
+		</span>
+	</div>
+	<br/>
+	<div class="ui-widget">
+		<div id="resizable" class="ui-widget-header">
+			<h3 class="ui-state-active">Resize</h3>
+		</div>
+
+		<div id="also" class="ui-widget-content">
+			<h3 class="ui-widget-header">will also resize</h3>
+		</div>
+	</div>
+	
+	
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">Preloaded</a></li>
+			<li><a href="ajax/content1.html">Tab 1</a></li>
+			<li><a href="ajax/content2.html">Tab 2</a></li>
+			<li><a href="ajax/content3-slow.php">Tab 3 (slow)</a></li>
+			<li><a href="ajax/content4-broken.php">Tab 4 (broken)</a></li>
+		</ul>
+		<div id="tabs-1">
+			<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+		</div>
+	</div>
+	
+	
+	<br/>
+	<div class="ui-helper-clearfix ui-widget-content">
+	
+	<ul class="ui-menu">
+		<li class="ui-menu-item"><a class="ui-state-default">aaaaa</a></li>
+		<li class="ui-menu-item">
+			<ul class="ui-menu">
+				<li class="ui-menu-item"><a class="ui-state-hover">aaaaa</a></li>
+				<li class="ui-menu-item">
+					
+					
+				</li>
+				<li class="ui-menu-item"><a>a</a></li>
+			</ul>
+			
+		</li>
+		<li class="ui-menu-item"><a>a</a></li>
+	</ul>
+	</div>
+	
+	
+	<br/>
+	
+	<button class="ui-button ui-state-default ui-widget-content ui-corner-all" style="padding:2px;">
+		<img src="http://i0.letvimg.com/cms/201202/09/aafa636471089f0fdcef207a2599fcb48586.jpg" width="80" height="80">
+	 </button>
+	
+	
+	<br/>
+	
+	<div id="accordion">
+		<h3><a href="#">Section 1</a></h3>
+		<div>
+			<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+		</div>
+		<h3><a href="#">Section 2</a></h3>
+		<div>
+			<p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+		</div>
+		<h3><a href="#">Section 3</a></h3>
+		<div>
+			<p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+			<ul>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+			</ul>
+		</div>
+		<h3><a href="#">Section 4</a></h3>
+		<div>
+			<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+		</div>
+	</div>
+	
+	<button id="toggle">Toggle icons</button>
+	
+	
+	<br/>
+	<br/>
+	<br/>
+	<ul class="ui-accordion ui-helper-reset  ui-widget ui-accordion-icons">
+		<li class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all">
+			<span class="ui-icon ui-icon-circle-arrow-e"></span>
+			<a>aaa</a>
+		</li>
+		<li class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all">
+			<span class="ui-icon ui-icon-circle-arrow-e"></span>
+			<a>aaa</a>
+		</li>
+	</ul>
+	
+	<br/>
+	<br/>
+	
+	<script type="text/javascript">
+		$( function() {
+			
+
+			$( "#beginning" ).button({
+				text: false,
+				icons: {
+					primary: "ui-icon-seek-start"
+				}
+			});
+			$( "#rewind" ).button({
+				text: false,
+				icons: {
+					primary: "ui-icon-seek-prev"
+				}
+			});
+			$( "#play" ).button({
+				text: false,
+				icons: {
+					primary: "ui-icon-play"
+				}
+			})
+			.click( function() {
+				var options;
+				if ( $( this ).text() === "play" ) {
+					options = {
+						label: "pause",
+						icons: {
+							primary: "ui-icon-pause"
+						}
+					};
+				} else {
+					options = {
+						label: "play",
+						icons: {
+							primary: "ui-icon-play"
+						}
+					};
+				}
+				$( this ).button( "option", options );
+			});
+			$( "#stop" ).button({
+				text: false,
+				icons: {
+					primary: "ui-icon-stop"
+				}
+			})
+			.click( function() {
+				$( "#play" ).button( "option", {
+					label: "play",
+					icons: {
+						primary: "ui-icon-play"
+					}
+				});
+			});
+			$( "#forward" ).button({
+				text: false,
+				icons: {
+					primary: "ui-icon-seek-next"
+				}
+			});
+			$( "#end" ).button({
+				text: false,
+				icons: {
+					primary: "ui-icon-seek-end"
+				}
+			});
+			$( "#shuffle" ).button();
+			$( "#repeat" ).buttonset();
+			
+			
+			$( "#resizable" ).resizable({
+				alsoResize: "#also"
+			});
+			$( "#also" ).resizable();
+			
+			
+			
+			$( "#tabs" ).tabs({
+				ajaxOptions: {
+					error: function( xhr, status, index, anchor ) {
+						$( anchor.hash ).html(
+							"Couldn't load this tab. We'll try to fix this as soon as possible. " +
+							"If this wouldn't be a demo." );
+					}
+				}
+			});
+			
+			
+			var icons = {
+				header: "ui-icon-circle-arrow-e",
+				headerSelected: "ui-icon-circle-arrow-s"
+			};
+			$( "#accordion" ).accordion({ icons: icons });
+			$( "#toggle" ).button().toggle(function() {
+				$( "#accordion" ).accordion( "option", "icons", false );
+			}, function() {
+				$( "#accordion" ).accordion( "option", "icons", icons );
+			});
+		});
+	</script>
+	-->
+</body>
+</html>

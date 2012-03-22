@@ -1,0 +1,5 @@
+﻿#container_login{background: url("../images/login_bg.jpg") no-repeat scroll -168px 78px transparent;height: 472px;margin: 0 auto 45px;position: relative;text-align: left;width:982px;}
+	#container_login .bg_l{background: url("../images/login_bg.jpg") no-repeat scroll 0 0 transparent;height: 394px;left: -168px;position: absolute;top: 78px;width: 168px;}
+	#container_login .bg_r{background: url("../images/login_bg.jpg") no-repeat scroll right 0 transparent;height: 394px;position: absolute;right: -178px;top: 78px;width: 178px;}
+    #container_login .logo{background-image: url("../images/logo_2.png");background-repeat: no-repeat;height: 34px;left: 16px;position: absolute;top:50px;width: 454px;}
+#container_login_foot{border-top: 1px solid #E2E2E2;margin:10px auto;text-align:left;width: 943px;}

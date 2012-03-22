@@ -1,0 +1,80 @@
+﻿body{background:#646464;}
+a{ text-decoration:none;}
+
+.warp{ background:#F9F8F8;width:996px; margin:25px auto 0px auto;padding:35px;overflow:hidden;}
+    .footer{ background:#F0EFEF;width:996px; margin:0px auto 25px auto; padding:35px;}
+        .footer .copyright{ text-align:center;}
+
+    .header{position:relative;width:auto; height:32px;}
+    .mp_logo{position:absolute;}
+    .mp_logo2{position:absolute;top:25px;left:350px;width:316px;height:55px; background:url(../images/maipi-logo2.png) no-repeat 0 1px;}
+    .mp_logo3{position:absolute;bottom:-15px;right:0px;width:117px;height:119px; background:url(../images/maipi-logo3.png);}
+    .mp_head .user{position:absolute;bottom:20px;right:10px;}
+    .mp_head .user a{position:relative;display:inline;}
+    
+    .container{position:relative;width:auto;height:auto; overflow:hidden;}
+        .container .menu{width:90px; float:left;}
+            
+            #main_menu{}
+            #main_menu li{margin:5px; text-align:center;}
+            #main_menu .icon{width:55px;height:50px;vertical-align:middle;}
+            #main_menu .title{display:block;}
+        
+        .container .content{width:900px; float:right;}
+    
+    /*
+    #main_menu{float:left;list-style:none;overflow:hidden; margin-top:20px;}
+	    #main_menu li{text-align:center;padding:5px; margin:2px;}
+		    #main_menu li a{text-decoration:none;}
+		    #main_menu img{width:22px;height:22px;}
+
+
+#main_container{float:right;width:910px;margin-top:20px;}
+*/
+.my-ui-grid{padding:2px;padding:2px}
+	.my-ui-grid table{width:100%; border-collapse:collapse;}
+		.my-ui-grid thead th{height:28px;font-weight:bold;padding:0px 3px;}
+		
+		.my-ui-grid td{height:22px; border: 1px solid #DDDDDD;color: #444444;padding:0px 3px;}
+			.my-ui-grid td a{padding:3px 4px;cursor:pointer;}
+			.my-ui-grid td a,.my-ui-grid td a:link,.my-ui-grid td a:visited{color: #0073ea; text-decoration: none;}
+			.my-ui-grid td a:hover{background: #0073ea;color: #ffffff; text-decoration: none;}
+			
+.my-ui-fieldset{margin:10px 0px;padding:10px;}
+	.my-ui-fieldset legend{}	
+		.my-ui-fieldset legend img{vertical-align:middle;width:25px; height:25px; margin:0px 8px;}
+
+.my-ui-form{position:relative;}
+.my-ui-form li{position:relative;margin-left:110px;text-align:left;padding:2px 0px;zoom:1;}
+.my-ui-form li label {position:relative;margin-left:-110px;width:110px;display:block;height:20px;line-height:20px;overflow:hidden;vertical-align:middle;text-align:right;float:left;padding:1px;}
+.my-ui-form li input {margin:0px;padding:0px;vertical-align:middle;border:1px solid #dddddd;height:20px;}
+.my-ui-form li select{margin:0px;padding:0px;vertical-align:middle;border:1px solid #dddddd;height:20px;}
+.my-ui-form li textarea{width:280px;}
+.my-ui-form li big{color: Red;vertical-align: middle;}
+	
+.my-ui-form li .msgbox.st1{display:block;white-space:nowrap;padding:1px 2px 1px 20px;height:18px;line-height:18px; background:url(vicons.gif) no-repeat 100px 100px ;vertical-align:middle;}
+.my-ui-form li .msgbox.st1.def{background-position:1px 1px;}                                                                
+.my-ui-form li .msgbox.st1.tips{background-position:1px -18px;}                                                               
+.my-ui-form li .msgbox.st1.error{background-position:1px -38px;}                                                              
+.my-ui-form li .msgbox.st1.pass{background-position:1px -58px;}
+
+
+
+
+
+/*扩展标准jQueryUI*/
+.ui-autocomplete-loading{background: white url('../images/ui-anim_basic_16x16.gif') right center no-repeat; }
+
+
+
+.batch-products{}
+.batch-products li{cursor:pointer;line-height:22px; }
+.batch-products li .loader{display:inline-block;*display:inherit;zoom:1;background: url(../images/ajax-loader.gif) 0 0 no-repeat;height: 16px;width: 16px;}
+.batch-products li .title{}
+.batch-products li .icon{}
+
+.batch-products li ul{margin-left:20px;}
+
+
+
+

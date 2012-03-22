@@ -1,0 +1,116 @@
+<style type="text/css">
+	.ui-main-box{position: absolute; left: 100px;top:100px; background:#ffffff; width: 340px;height: 480px; }	
+
+	.ui-widget{width: 340px;height: 480px;}
+	.ui-widget-header{width:100%;height: 60px; background:green;}
+</style>
+
+<div id="debugerInfo" class="debugerInfo"> </div>
+<div id="stats" style="position:absolute;right:0px;top:0px;color:red"> </div>
+
+
+<div class="ui-main-box">
+	
+</div>
+
+<!--
+<div class="ui-widget">
+		<div class="ui-widget-header">
+			<dl>
+				<dt><img></dt>
+				<dd><span></span></dd>
+			</dl>
+			<ul>
+				<li>联系人</li>
+				<li>群组</li>
+			</ul>
+		</div>
+		
+		<div>
+			<input type="text" value="搜索联系人" />
+			<button>添加好友</button>
+		</div>
+		
+		<div>
+			<dl>
+				<dt>我的好友</dt>
+				<dd>
+					<ul>
+						<li>aa</li>
+						<li>bb</li>
+						<li>cc</li>
+					</ul>
+				</dd>
+				<dt>亲戚</dt>
+				<dd>
+					<ul>
+						<li>aa</li>
+						<li>bb</li>
+						<li>cc</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+		
+	</div>	
+-->
+
+
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.tmpl.js"></script>
+<script type="text/javascript" src="js/chat/friends.js"></script>
+<script type="text/javascript" src="js/chat/ui.js"></script>
+
+<script type="text/javascript">
+	function render(tpl,context) {
+		var tag_val=/\$\$(\w+)\$\$/g;
+		var result=tpl;
+		if(typeof context == "object" ) {
+			result=tpl.replace(tag_val, function(m,n) {
+				return context[n];
+			});
+		}
+		return result
+	}
+
+	function trace(msg) {
+		$("#debugerInfo").append(render("<p>$$msg$$</p>", {
+			"msg":msg
+		}))
+	}
+</script>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+	var manager=new FriendsManager();
+	
+	var friendsPanel=new FriendsPanel();
+	
+	
+	
+	$(".ui-main-box").append(friendsPanel.render(manager.getStore()))
+	
+	
+	
+	var session=io.connect('http://s1.iisii.net');
+	
+	var chat =session.of("/chat") 
+	console.dir(chat)
+
+	chat.on('connect', function () {
+		trace("己连接:"+chat.socket.sessionid);
+	});
+	chat.on('room message', function(data) {
+		trace("[房间广播]"+data.message+","+data.userid);
+	})
+	
+	
+	var stats=session.of("stats");
+	var DATA=null;
+	
+	stats.on('announce',function(data){
+		DATA=data;
+		$("#stats").html(data.runsecond+"s");
+	})
+	
+	
+</script>
