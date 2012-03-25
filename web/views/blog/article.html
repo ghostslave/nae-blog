@@ -1,0 +1,64 @@
+<div class="post-1 post type-post status-publish format-standard hentry category-wordpress" id="post-1">
+
+<h2><a title="${article.title}" href="http://demo.wordpress.la/?p=7" rel="bookmark">${article.title}</a></h2>
+	<div class="comm_date">
+		<span class="data">
+			<span class="j">${$item.fday(article.ctime)}</span><br/>${$item.fmonth(article.ctime)}
+		</span>
+		<span class="nr_comm">
+			<a class="nr_comm_spot" title="没有评论" href="http://demo.wordpress.la/?p=7#respond">${article.comments.length}</a>
+		</span>
+	</div>
+	{{html article.content}}
+
+	<div class="cat_tags">
+		<div class="category">Posted under <a href="http://demo.wordpress.la/?cat=1" title="查看 wordpress 中的全部文章" rel="category">wordpress</a></div>
+		<div class="continue">一条评论</div>
+		<div class="clear"></div></div><div class="cat_tags_close"></div>
+	</div>
+
+	<h2 id="comments"><span class="cufon cufon-canvas" style="width: 5px; height: 24px; "><canvas width="26" height="24" style="top: 0px; left: -1px; "></canvas><span class="cufon-alt">一条评论 </span></span><a href="#postcomment" title="留下评论"></a>
+	</h2>
+
+	<div id="comentarii">
+		<ol class="commentlist">
+			<li class="alt " id="comment-1">
+			<cite>
+			<img alt="" src="http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25" class="avatar avatar-25 photo avatar-default" height="25" width="25"><span class="author"><a onclick="javascript:pageTracker._trackPageview('/outgoing/wordpress.org/');" href="http://wordpress.org/" rel="external nofollow" class="url">WordPress</a></span><br><span class="time">15:23</span> on <a href="#comment-1" title="">十一月 22nd, 2008</a> </cite>
+			<div class="commenttext"><p>你好，这是一条评论。<br>要删除这条评论，请先登录系统，查看这篇日志的评论列表，然后您就可以看到编辑或者删除评论的选项了。</p>
+			</div>
+			</li>
+		</ol>
+	</div>
+
+
+
+	<h2 id="postcomment"></h2>
+	<form action="http://demo.wordpress.la/wp-comments-post.php" method="post" id="commentform">
+		<p>
+			<input type="text" name="author" id="author" value="" size="22" tabindex="1">
+			<label for="author"><small>姓名 (必填)</small></label>
+		</p>
+		<p>
+			<input type="text" name="email" id="email" value="" size="22" tabindex="2">
+			<label for="email"><small>电子邮件 (不会被公开) (必填)</small></label>
+		</p>
+
+<p><input type="text" name="url" id="url" value="" size="22" tabindex="3">
+<label for="url"><small>站点</small></label></p>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="发表评论">
+<small class="rss_comments"><a href="http://demo.wordpress.la/?feed=rss2&amp;p=1"><abbr title="Really Simple Syndication">RSS</abbr> feed for comments on this post</a></small>
+
+<input type="hidden" name="comment_post_ID" value="1">
+</p>
+	<input type="hidden" name="refJS" value="http%3A//demo.wordpress.la/%3Fwptheme%3DLightWord%26paged%3D2">
+	</form>
+
+<div class="newer_older"></div>
+
