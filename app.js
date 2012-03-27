@@ -23,7 +23,7 @@ app.configure( function() {
 	app.use(express['static'](__dirname + '/web'));
 });
 
-/*
+
 app.configure('development', function() {
 	app.use(express.errorHandler({
 		dumpExceptions: true,
@@ -33,7 +33,7 @@ app.configure('development', function() {
 app.configure('production', function() {
 	app.use(express.errorHandler());
 });
-*/
+
 
 
 //svc_blogs.register(app);
