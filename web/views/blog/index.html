@@ -3,16 +3,14 @@
 	<h2><a title="illustrative" href="http://demo.wordpress.la/?p=7" rel="bookmark">${item.title}</a></h2>
 	<div class="comm_date">
 		<span class="data">
-			<span class="j">22</span><br/>十一
+			<span class="j">${$item.fday(item.ctime)}</span><br/>${$item.fmonth(item.ctime)}
 		</span>
 		<span class="nr_comm">
 			<a class="nr_comm_spot" title="没有评论" href="http://demo.wordpress.la/?p=7#respond">${item.comments.length}</a>
 		</span>
 	</div>
-	
+	{{html item.content}}
 	${item.content}
-	
-
 	<div class="cat_tags">
 		<div class="category">
 			Tagged as:
@@ -21,7 +19,7 @@
 			{{/each}}
 		</div>
 		<div class="continue">
-			<a title="Read more about illustrative" href="http://demo.wordpress.la/?p=7#more-7">Continue reading</a>
+			<a title="${item.title}" href="/article/?id=${item._id}">Continue reading</a>
 		</div>
 		<div class="clear"> </div>
 	</div>
