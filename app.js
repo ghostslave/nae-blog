@@ -7,7 +7,6 @@
 var db=require('./config.js');
 var app = express.createServer();
 
-//var svc_blogs=require('./service/blogs.js');
 
 
 app.configure( function() {
