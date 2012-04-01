@@ -8,7 +8,6 @@ var db=require('./config.js');
 var app = express.createServer();
 
 
-
 app.configure( function() {
 	app.set('views', __dirname + '/web/views');
 	app.set('view engine', 'html');
@@ -22,7 +21,7 @@ app.configure( function() {
 	app.use(express['static'](__dirname + '/web'));
 });
 
-
+/*
 app.configure('development', function() {
 	app.use(express.errorHandler({
 		dumpExceptions: true,
@@ -32,19 +31,12 @@ app.configure('development', function() {
 app.configure('production', function() {
 	app.use(express.errorHandler());
 });
-
-
-//svc_blogs.register(app);
-
-
-
+*/
 app.get('/', blog.index);
 app.get('/article/',blog.article);
-
 app.get('/admin',function(req,res){
 	res.render('admin/index.html',{title:'管理后台'});	
 });
-
 
 app.listen(9000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
