@@ -3,7 +3,7 @@ var async=require('async');
 function index(req, res) {
 	model.articles.find().toArray(function(err,articles){
 		if(err){
-			res.render('blog/error.html',{title:'å‡ºé”™å•¦ï¼ï¼ï¼',error:err});	
+			res.render('blog/error.html',{title:'³ö´íÀ²£¡£¡£¡',error:err});	
 		}else{
 			res.render('blog/index.html',{
 				layout:'master-blog.html',
@@ -13,7 +13,7 @@ function index(req, res) {
 					return date.getDay()+1;
 				},
 				fmonth:function(date){
-					var cDate=['ä¸€','äºŒ','ä¸‰','å››','äº”','å…­','ä¸ƒ','å…«','ä¹','å','åä¸€','åäºŒ']
+					var cDate=['Ò»','¶ş','Èı','ËÄ','Îå','Áù','Æß','°Ë','¾Å','Ê®','Ê®Ò»','Ê®¶ş']
 					return cDate[date.getMonth()];
 				}
 			});	
@@ -25,7 +25,7 @@ function article(req,res){
 	
 	model.articles.findById(req.query.id,function(err,article){
 		if(err){
-			res.render('blog/error.html',{title:'å‡ºé”™å•¦ï¼ï¼ï¼',error:err});	
+			res.render('blog/error.html',{title:'³ö´íÀ²£¡£¡£¡',error:err});	
 		}else{
 			var result=article;
 			res.render('blog/article.html',{
@@ -37,7 +37,7 @@ function article(req,res){
 					return date.getDay()+1;
 				},
 				fmonth:function(date){
-					var cDate=['ä¸€','äºŒ','ä¸‰','å››','äº”','å…­','ä¸ƒ','å…«','ä¹','å','åä¸€','åäºŒ']
+					var cDate=['Ò»','¶ş','Èı','ËÄ','Îå','Áù','Æß','°Ë','¾Å','Ê®','Ê®Ò»','Ê®¶ş']
 					return cDate[date.getMonth()];
 				}
 

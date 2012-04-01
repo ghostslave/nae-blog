@@ -21,19 +21,19 @@
 				<dd><span></span></dd>
 			</dl>
 			<ul>
-				<li>è”ç³»äºº</li>
-				<li>ç¾¤ç»„</li>
+				<li>ÁªÏµÈË</li>
+				<li>Èº×é</li>
 			</ul>
 		</div>
 		
 		<div>
-			<input type="text" value="æœç´¢è”ç³»äºº" />
-			<button>æ·»åŠ å¥½å‹</button>
+			<input type="text" value="ËÑË÷ÁªÏµÈË" />
+			<button>Ìí¼ÓºÃÓÑ</button>
 		</div>
 		
 		<div>
 			<dl>
-				<dt>æˆ‘çš„å¥½å‹</dt>
+				<dt>ÎÒµÄºÃÓÑ</dt>
 				<dd>
 					<ul>
 						<li>aa</li>
@@ -41,7 +41,7 @@
 						<li>cc</li>
 					</ul>
 				</dd>
-				<dt>äº²æˆš</dt>
+				<dt>Ç×Æİ</dt>
 				<dd>
 					<ul>
 						<li>aa</li>
@@ -97,10 +97,10 @@
 	console.dir(chat)
 
 	chat.on('connect', function () {
-		trace("å·±è¿æ¥:"+chat.socket.sessionid);
+		trace("¼ºÁ¬½Ó:"+chat.socket.sessionid);
 	});
 	chat.on('room message', function(data) {
-		trace("[æˆ¿é—´å¹¿æ’­]"+data.message+","+data.userid);
+		trace("[·¿¼ä¹ã²¥]"+data.message+","+data.userid);
 	})
 	
 	

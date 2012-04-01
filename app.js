@@ -1,4 +1,4 @@
-var url=require('url')
+﻿var url=require('url')
 	,path=require('path')
 	,tpl=require('./node_modules/jqtpl')	//jquery 模版引挚
 	,express=require('./node_modules/express')
@@ -33,7 +33,6 @@ app.configure('development', function() {
 app.configure('production', function() {
 	app.use(express.errorHandler());
 });
-
 
 
 //svc_blogs.register(app);
